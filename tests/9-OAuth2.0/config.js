@@ -9,7 +9,8 @@ var config = {
 
 	session:{
 		secret:'secreto'
-	}
+	},
+	'phrase': 'soynoderodecorazon',
 }
 
 module.exports = config;

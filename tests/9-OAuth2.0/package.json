@@ -1,13 +1,14 @@
 {
-	"name":"Oauth",
-	"version":"0.0.0",
-	"dependencies":{
-		"body-parser":"^1.9.3",
-		"cookie-parser":"^1.3.3",
-		"express":"^4.10.4",
-		"express-session":"^1.9.3",
-		"morgan":"^1.5.0",
-		"passport":"^0.2.1",
-		"passport-google-oauth":"^0.1.5"
-	}
+  "name": "Oauth",
+  "version": "0.0.0",
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "cookie-parser": "^1.3.3",
+    "express": "^4.10.4",
+    "express-session": "^1.9.3",
+    "jsonwebtoken": "^5.7.0",
+    "morgan": "^1.5.0",
+    "passport": "^0.2.1",
+    "passport-google-oauth": "^0.1.5"
+  }
 }

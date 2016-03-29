@@ -6,6 +6,8 @@ var morgan = require('morgan');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var config = require('./config');
+var jwt    = require('jsonwebtoken');
+
 
 passport.serializeUser(function(user, done) {
   done(null, user);
@@ -39,6 +41,7 @@ function(accessToken, refreshToken, profile, done) {
 ));
 
 var app = express();
+app.set('superSecret', config.phrase);
 
 // configure Express
 app.use(morgan(':method :url :response-time'));
@@ -66,7 +69,13 @@ app.get('/', function(req, res) {
     res.redirect('/auth/google');
   }
   else {
-    res.json(req.user);
+  	var numero = (Math.random()*5-1)+1;
+  	var usuario = req.user._json.email + numero;
+  	var token = jwt.sign(usuario, app.get('superSecret'), {
+                      expiresInMinutes: 1440 // tiempo de expiración, checar documentacion
+                    });
+    res.json(token);
+    //res.json(req.user._json.email);
   }
 });
 
