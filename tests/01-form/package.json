@@ -1,0 +1,10 @@
+{
+  "name": "form",
+  "description": "form get post",
+  "version": "0.0.1",
+  "dependencies": {
+    "body-parser": "^1.8.3",
+    "express": "4.x",
+    "express-handlebars": "^2.0.1"
+  }
+}

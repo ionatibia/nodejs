@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table example</title>
+</head>
+<body>
+
+    {{#if title}}
+    <h3>{{title}}</h3>
+    {{else}}
+    <h3>No title</h3>
+    {{/if}}
+
+    <table border="1">
+    	{{#each users}}
+    	<tr>
+    		<td>{{name}}</td>
+    	</tr>
+    	{{/each}}
+    </table>
+
+</body>
+</html>
