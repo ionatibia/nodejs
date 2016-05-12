@@ -13,29 +13,54 @@
         <div class="container">
             <div class="row row-header">
                 <h1>Subir fotos</h1>
-                <img src="http://127.0.0.1:3000/public/images/uploads/profile/una.jpeg">
             </div>
         </div>
     </header>
 
+<!--Los formularios los he hecho normales, con action.... se puede usar con ajax teniendo en cuenta unos atributos que hay que declarar en la propia llamada del ajax-->
+
 	<div class="container">
-		<form action='http://localhost:3000/guardarFotoPerfil' method='post' id="formularioFotos" enctype='multipart/form-data'>
+	<!--MUY IMPORTANTE: atributo enctype-->
+		<form action='http://localhost:3000/guardarFotoPerfil' method='post' id="formularioFotoPerfil" enctype='multipart/form-data'>
 			<label for="nombre">Nombre: </label>
-			<input class="form-control" type="text" id="nombre" name="nombre"/>
+			<input class="form-control" type="text" id="correo" name="correo"/>
 			<br>
-			<label for="imagen">Imagen: </label>
+			<label for="imagenPerfil">Imagen: </label>
+			<!--type file y con el name para recogerlo desde la api-->
 			<input class="form-control" type="file" id="imagenPerfil" name="imagenPerfil"/>
 			<br>
 			<button id="enviar" class="btn btn-primary">Enviar</button>
 
 		</form>					
 	</div>
-	<div class="container" id="fotoContainer">
-		<button class="btn btn-primary">Mostrar</button>
-	</div>
-	<p></p>
-<div>
 
+	<div class="container">
+		<form id="formularioImagenes" action='http://localhost:3000/guardarImagen' method='post' enctype='multipart/form-data'>
+			<label for="correo">Correo: </label>
+			<input class="form-control" type="text" id="correo" name="correo"/>
+			<br>
+			<label for="imagen">Imagen: </label>
+			<input class="form-control" type="file" id="imagen" name="imagen"/>
+			<br>
+			<button id="enviar" class="btn btn-primary">Enviar</button>
+
+		</form>					
+	</div>
+
+	<div class="container">
+		<form id="formularioVideos" action='http://localhost:3000/guardarVideo' method='post' enctype='multipart/form-data'>
+			<label for="correo">Correo: </label>
+			<input class="form-control" type="text" id="correo" name="correo"/>
+			<br>
+			<label for="video">Imagen: </label>
+			<input class="form-control" type="file" id="video" name="video"/>
+			<br>
+			<button id="enviar" class="btn btn-primary">Enviar</button>
+
+		</form>					
+	</div>
+	
+<div>
 <% include ../partials/libreriasJs %>
 </body>
 </html>
