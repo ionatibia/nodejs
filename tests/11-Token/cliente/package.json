@@ -1,0 +1,22 @@
+{
+  "name": "tokenClient",
+  "version": "1.0.0",
+  "description": "token client",
+  "engines": {
+    "node": ">= 0.6.0",
+    "npm": ">= 1.0.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "ejs": "^2.4.1",
+    "express": "~3.4.4",
+    "express-flash": "0.0.2",
+    "express-session": "^1.13.0",
+    "http": "0.0.0",
+    "mongoose": "^4.4.8"
+  },
+  "devDependencies": {},
+  "bundleDependencies": [],
+  "private": true,
+  "main": "server.js"
+}
